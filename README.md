@@ -12,18 +12,28 @@ i know why. i don't want GNU License on Nix files.
 4. clone or move packages.nix to /etc/nixos/packages.nix
 5. import packages.nix in configuration.nix it should look like:
 > imports =
->   [
->     ./hardware-configuration.nix
->     ./packages.nix
->   ];
+  
+    [
+    
+      ./hardware-configuration.nix
+
+      ./packages.nix
+    
+    ];
 
 6. make sure you have ZSH
 7. enjoy!
 
 Commands are:
-> nix-install [pkg]
+> nix-install [pkg]:
   adds package.
-> nix-remove [pkg]
+
+> nix-remove [pkg]:
   removes package.
-> nix-list
+
+> nix-list:
   lists packages in /etc/nixos/packages.nix file.
+
+# New Additions: Built-in OpenDOAS to SUDO alias
+
+to use this, uncomment the line "#alias sudo='doas'".

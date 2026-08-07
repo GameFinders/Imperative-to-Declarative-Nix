@@ -1,4 +1,8 @@
-PROMPT='%F{green}%n@%m%f%~$ '
+PROMPT='%F{green}%n@%m%f %~ $ '
+
+# Uncomment this if you use OpenDOAS
+# (or replace the word 'sudo' with 'doas')
+#alias sudo="doas"
 
 nix-list() {
   clear
@@ -8,9 +12,9 @@ nix-list() {
   echo "All the Nix packages..."
 }
 
-nix-install() {
+nix-add() {
   if [[ -z "$1" ]]; then
-    echo "Usage: nix-install <package-name>"
+    echo "Usage: nix-add <package-name>"
     return 1
   fi
 
