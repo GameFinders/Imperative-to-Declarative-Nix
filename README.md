@@ -13,7 +13,8 @@ i know why. i don't want GNU License on Nix files.
 5. import packages.nix in configuration.nix it should look like:
 > Code:
 
-```imports =
+```
+imports =
   [
     ./hardware-configuration.nix
     ./packages.nix
@@ -33,6 +34,8 @@ Commands are:
 > nix-list:
   lists packages in /etc/nixos/packages.nix file.
 
-# New Additions: Built-in OpenDOAS to SUDO alias
+# New Additions: The "--wait" flag
 
-to use this, uncomment the line "#alias sudo='doas'".
+Works properly only when using nix-add or nix-remove commands.
+
+When you add a --wait flag, it should append the text and not rebuild the system. Instead the package waits for the rebuild command before it can get installed.
