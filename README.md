@@ -39,3 +39,7 @@ Commands are:
 Works properly only when using nix-add or nix-remove commands.
 
 When you add a --wait flag, it should append the text and not rebuild the system. Instead the package waits for the rebuild command before it can get installed.
+
+####### still the same license
+
+if you are sad that there is no .bashrc, then DO THE OPEN SOURCE THING AND FORK IT!
