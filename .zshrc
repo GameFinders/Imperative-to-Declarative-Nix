@@ -1,4 +1,4 @@
-PROMPT='%F{green}%n@%m%f %~ $ '
+PROMPT='%F{green}%n@%m%f %~ [%F{red}%?%f] %# '
 
 # Uncomment this if you use OpenDOAS
 # (or replace the word 'sudo' with 'doas')
@@ -33,10 +33,14 @@ nix-add() {
   fi
 
   # Insert package name right before the closing '];' bracket
-  sudo sed -i "/^\s*\];/i \ \ \ \ $PKG" "$FILE" && \
-  echo "installing nix $PKG..." && \
-  sudo nixos-rebuild switch --quiet > /dev/null
-  sleep 1
+  sudo sed -i "/^\s*\];/i \ \ \ \ $PKG" "$FILE"
+  if [[ $2 == "--wait" ]]; then
+    echo "Added $PKG to /etc/nixos/packages.nix."
+    echo "Waiting for rebuild command..."
+    return 0
+  fi
+  echo "installing nixpkg $PKG..."
+  sudo nixos-rebuild switch --quiet
   echo ""
   echo "Installed pkgs.$PKG successfully."
 }
@@ -63,19 +67,21 @@ nix-remove() {
     fi
 
     # Remove the package line from packages.nix and rebuild the system
-    sudo sed -i "/\b${PKG}\b/d" "$FILE" && \
-    echo "removing nix $PKG..." && \
-    sudo nixos-rebuild switch --quiet > /dev/null
-
-    sleep 1
+    sudo sed -i "/\b${PKG}\b/d" "$FILE"
+    if [[ $2 == "--wait" ]]; then
+      echo "Added $PKG to /etc/nixos/packages.nix."
+      echo "Waiting for rebuild command..."
+      return 0
+    fi
+    echo "removing nixpkg $PKG..."
+    sudo nixos-rebuild switch --quiet
     echo ""
     echo "removed nixpkg $PKG successfully."
 }
 
 nix-update() {
   echo "(re)building system ..."
-  sudo nixos-rebuild switch --upgrade --quiet > /dev/null
-  sleep 1
+  sudo nixos-rebuild switch --upgrade --quiet
   echo ""
   echo "Rebuilt the system."
 }
