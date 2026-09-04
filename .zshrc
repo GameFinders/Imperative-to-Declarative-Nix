@@ -48,6 +48,8 @@ nix-add() {
       echo "E: Package '$PKG' is already installed"
       return 1
   fi
+}
+
 nix-remove() {
     if [[ -z "$1" ]]; then
         echo "Usage: nix-remove <package-name>"
