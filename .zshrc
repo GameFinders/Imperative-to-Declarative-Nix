@@ -1,8 +1,25 @@
-PROMPT='%F{green}%n@%m%f %~ [%F{red}%?%f] %# '
+PROMPT='[%F{blue}%n@%m%f %F{red}%?%f] %F{cyan}%d%f %F{yellow}%#%f '
 
 # Uncomment this if you use OpenDOAS
 # (or replace the word 'sudo' with 'doas')
 #alias sudo="doas"
+#alias visudo="nano /etc/doas.conf"
+
+echo "--------                                                   --"
+echo "   ==     -------- --------- --------- -------- -------- -------- ------- -      - -------"
+echo "   ==     =  ==  = =       = ==== ==== ==             ==   --        =    -     -  =      ="
+echo "   ==     =  ==  = =       = ==    === ==       ========   --        =    -    -   ========"
+echo "   ==     =  ==  = ========= ========= ==       ==____==   ====== ======= =====    ="
+echo "--------  =  ==  = =         ==        ==       ========                           ========= *#*# to Declarative Nix"
+echo "                   =         =========                                                            made by GameFinders @ GitHub #*#*"
+echo "                   =                                                                              https://github.com/GameFinders/Imperative-to-Declarative-Nix"
+echo "                   ="
+echo ""
+echo "Licensed under the WTFPL 2.0; this ZSH script adds imperative commands to NixOS without people using nix-env."
+
+# Enables fasfetch output
+# ( Use it ONLY if you want to flex on people! )
+#fastfetch
 
 nix-list() {
   clear
@@ -31,20 +48,6 @@ nix-add() {
       echo "E: Package '$PKG' is already installed"
       return 1
   fi
-
-  # Insert package name right before the closing '];' bracket
-  sudo sed -i "/^\s*\];/i \ \ \ \ $PKG" "$FILE"
-  if [[ $2 == "--wait" ]]; then
-    echo "Added $PKG to /etc/nixos/packages.nix."
-    echo "Waiting for rebuild command..."
-    return 0
-  fi
-  echo "installing nixpkg $PKG..."
-  sudo nixos-rebuild switch --quiet
-  echo ""
-  echo "Installed pkgs.$PKG successfully."
-}
-
 nix-remove() {
     if [[ -z "$1" ]]; then
         echo "Usage: nix-remove <package-name>"
