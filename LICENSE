@@ -1,13 +1,62 @@
-        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
-                    Version 2, December 2004 
+Banpage Public License
+V1 by GameFinders
 
- Copyright (C) 2026 GameFinders 
+(C) 2026 GameFinders
 
- Everyone is permitted to copy and distribute verbatim or modified 
- copies of this license document, and changing it is allowed as long 
- as the name is changed. 
+everyone is allowed to copy the code excluding any entity the author bans under a file in the Git repo named !BANPAGE.txt.
 
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+anyone banned cannot do much about it.
 
-  0. You just DO WHAT THE FUCK YOU WANT TO.
+a !BANPAGE.txt includes
+  -> Banlist
+  -> Whitelist
+
+a whitelisted user can relicense the fork under Banpage Public License' above version; or any license that can be swapped to under 5th title.
+
+for the author, you cannot sue them for:
+  1- not providing the file they want
+  2- putting you as a blacklisted entity on !BANPAGE.txt
+
+to use the license the author has to:
+
+1- include a blank !BANPAGE.txt in the repo that they can control; as for otherwise the license acts like the WTFPL with author's protection.
+2- the Git on Cloud doesn't matter; it can be any Git provider; etc. GitHub, GitLab, HuggingFace Hub, etc., the author can use the license so long as this document sits as "LICENSE" in the Git Repo.
+
+1-- what to call Banpage Public License
+
+the shortened name is intended to be BANPAGEPL.
+
+2-- Disclosures
+
+1) a contributor may or may not touch the !BANPAGE.txt file is entirely the author's discreetion.
+2) the author cannot be sued by a entity because it served no purpose for their use. THIS LICENSE DOES NOT GUARANTEE A SINGLE THING ABOUT ANY PRODUCT BEING USEFUL FOR ONE SPECIFIC USE; IF THE AUTHOR HAD MADE A PRODUCT FOR OTHER SPECIFIC USES ONLY.
+3) if the author is "banned" from their own project, the license then acts like the WTFPL because the !BANPAGE.txt file is now invalid because a contributor tried to ban the author if the contributor had access to the !BANPAGE.txt file.
+4) if a author choses to use this license without !BANPAGE.txt file; they can but then the license acts like the WTFPL.
+5) The creator of license may release newer versions of BANPAGEPL.
+
+3-- Licensing terms for when !BANPAGE.txt doesn't exist or is invalidated
+
+you just do what the f*ck you want to, except the author can't be sued by a corporate because they wanted to fork it, and you cannot easily change the license.
+
+4-- Author has the control for
+
+Enforcing !BANPAGE.txt
+Creating !BANPAGE.txt
+Controlling who can access !BANPAGE.txt
+
+5-- Ditching or changing licenses
+
+if at one version the author choses to ditch the Banpage License, they can swap it out for:
+
+- MIT
+- GNU GPLv2/GNU GPLv3
+- GNU LGPL
+- BSD
+- WTFPL
+- Unlicense
+- ZSH License
+
+for the next releases, or other licenses that aren't listed here; but allows to swapping to other licenses.
+
+The author who used to use it; may at any time swap back to Banpage License.
+New authors to use this license are welcome to use this license.

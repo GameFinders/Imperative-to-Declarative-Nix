@@ -1,0 +1,8 @@
+{ ban, unban, ... }
+
+{
+  Copyright (C) <year> <name-of-author>
+
+  Blacklisted entities:
+  - Apple
+}
