@@ -3,7 +3,7 @@ PROMPT='[%F{blue}%n@%m%f %F{red}%?%f] %F{cyan}%d%f %F{yellow}%#%f '
 # Uncomment this if you use OpenDOAS
 # (or replace the word 'sudo' with 'doas')
 #alias sudo="doas"
-#alias visudo="nano /etc/doas.conf"
+#alias visudo="doas nano /etc/doas.conf"
 
 echo "--------                                                   --"
 echo "   ==     -------- --------- --------- -------- -------- -------- ------- -      - -------"
@@ -15,7 +15,7 @@ echo "                   =         =========                                    
 echo "                   =                                                                              https://github.com/GameFinders/Imperative-to-Declarative-Nix"
 echo "                   ="
 echo ""
-echo "Licensed under the WTFPL 2.0; this ZSH script adds imperative commands to NixOS without people using nix-env."
+echo "Licensed under the idkw License; this ZSH script adds imperative commands to NixOS without people using nix-env."
 
 # Enables fasfetch output
 # ( Use it ONLY if you want to flex on people! )
